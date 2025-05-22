@@ -13,20 +13,23 @@ const config = {
     default: 'arcade'
   },
   scene: {
-    preCarregamento,
+    preload,
     create,
   }
 }
 
 //carregando assets(imagens, muisca e animações)
-function preCarregamento (){
+function preload (){
   //cena
-  debugger
+  this.load.image('sky', 'assets/sky.png')
 }
 
 // Função para configurar e criar os objetos do jogo
 function create (){
-  debugger
+  //x = 400
+  //y = 300
+  //key da imagem
+  this.add.image (config.width / 2, config.height /2, 'sky')
 }
 
 //colocando config no jogo
